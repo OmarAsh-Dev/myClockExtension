@@ -68,7 +68,7 @@
   
   .clock span {
     font-size: 36px; /* Adjusted for smaller scale */
-    width: 80px; /* Adjusted to fit properly */
+    width: 45px; /* Adjusted to fit properly */
     display: inline-block;
     text-align: center;
     position: relative;
@@ -77,7 +77,7 @@
   .clock span::after {
     font-size: 12px; /* Adjusted for smaller scale */
     position: absolute;
-    bottom: -5px;
+    bottom: -12px;
     left: 50%;
     transform: translate(-50%);
   }
