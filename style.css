@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    width: 350px; /* Set width to match extension popup size */
+    height: 190px; /* Set height to match extension popup size */
+    overflow: hidden; /* Prevent scrollbars */
+  }
+  
+  .container {
+    width: 100%; /* Ensures container takes full width */
+    height: 100%; /* Ensures container takes full height */
+    background: linear-gradient(45deg, #00001f, #30197d);
+    color: #fff;
+    position: relative;
+  }
+  
+  .hero {
+    width: 320px; /* Adjusted to fit within 350px width */
+    height: 140px; /* Adjusted height */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .clock {
+    width: 100%;
+    height: 100%;
+    background: rgba(235, 0, 255, 0.11);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(40px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    width: 90px; /* Adjusted for smaller scale */
+    height: 90px; /* Adjusted for smaller scale */
+    background: #f41b75;
+    border-radius: 5px;
+    left: -25px;
+    top: -25px;
+    z-index: -1;
+    filter: blur(20px);
+  }
+  
+  .hero::after {
+    content: '';
+    position: absolute;
+    width: 90px; /* Adjusted for smaller scale */
+    height: 90px; /* Adjusted for smaller scale */
+    background: #419aff;
+    border-radius: 5px;
+    right: -15px;
+    bottom: -25px;
+    z-index: -1;
+    filter: blur(20px);
+  }
+  
+  .clock span {
+    font-size: 36px; /* Adjusted for smaller scale */
+    width: 80px; /* Adjusted to fit properly */
+    display: inline-block;
+    text-align: center;
+    position: relative;
+  }
+  
+  .clock span::after {
+    font-size: 12px; /* Adjusted for smaller scale */
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  
+  #hrs::after {
+    content: 'HOURS';
+  }
+  
+  #min::after {
+    content: 'MINUTES';
+  }
+  
+  #sec::after {
+    content: 'SECONDS';
+  }
+  
+  #period {
+    font-size: 20px; /* Adjusted for smaller scale */
+    margin-left: 10px;
+  }
+  
